@@ -1,0 +1,149 @@
+.menu .btn-menu {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-secondary);
+  background-image: url(../images/btn-menu.png);
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.menu .btn-menu.close {
+  background-image: url(../images/btn-close.png);
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.menu .sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  right: -100%;
+  z-index: 1;
+  transition: 0.5s;
+  width: 70%;
+  height: 100vh;
+  background-color: var(--color-secondary);
+}
+
+.menu .sidebar.close {
+  right: 0;
+}
+
+.menu .sidebar ul li {
+  margin: 20px;
+  text-align: center;
+}
+
+.menu .sidebar ul a {
+  font-size: 1.5em;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+.menu .sidebar ul a:hover {
+  color: var(--color-primary);
+}
+
+.home {
+  display: flex;
+}
+
+.home .img-background {
+  display: flex;
+  align-items: center;
+}
+
+.home .img-background img {
+  border-radius: 50%;
+  box-shadow: 0 0 8px gray;
+  margin-left: 30px;
+}
+
+.home .content {
+  padding: 16px 90px;
+}
+
+.home .content .header {
+  margin-top: 15px;
+}
+
+.home .content .header span {
+  padding: 10px;
+  background-color: var(--color-secondary);
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.home .content .personal-data {
+  position: absolute;
+  top: 30%;
+}
+
+.home .content .personal-data h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: var(--color-primary);
+}
+
+.home .content .personal-data h2 {
+  margin-top: 8px;
+  font-size: 1.3em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.home .content .personal-data p {
+  margin: 24px 0;
+  padding-right: 80px;
+  line-height: 1.5em;
+  word-spacing: 0.2em;
+  text-align: justify;
+}
+
+.home .content .btn-cv {
+  text-decoration: none;
+  color: white;
+  background-color: var(--color-primary);
+  padding: 10px 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.home .content .btn-cv:hover {
+  opacity: 0.8;
+}
+
+.home .content .social-media {
+    display: flex;
+    position: absolute;
+    bottom: 3%;
+}
+
+.home .content .social-media img {
+    height: 1.2em;
+    margin-right: 1em;
+}
+
+.home .content .social-media img:hover {
+    opacity: 0.5;
+}

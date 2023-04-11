@@ -1,0 +1,30 @@
+@import "home.css";
+@import "about.css";
+@import "services.css";
+@import "appointment.css";
+@import "galery.css";
+@import "location.css";
+
+
+:root {
+    --color-primary: #917758;
+    --color-secondary: #3c2915;
+    --color-primary-light: #f5eee6;
+    --color-primary-third: #191919;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 1180px;
+    margin: 0 auto;
+}

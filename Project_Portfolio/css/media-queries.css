@@ -1,0 +1,132 @@
+@media (max-width: 1000px) {
+
+  .menu .sidebar {
+    width: 100%;
+  }
+
+  .menu .sidebar ul a {
+    font-size: 1.2em;
+  }
+
+  .home {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .home .img-background img {
+    width: 25%;
+    margin: 8vh auto 0 auto;
+  }
+
+  .home .content .header span {
+    display: none;
+  }
+
+  .home .content .header span {
+    font-size: 0.8em;
+    padding: 5px;
+  }
+
+  .home .content .personal-data {
+    position: inherit;
+  }
+
+  .about {
+    padding: 5vh 0;
+  }  
+
+  .about .content {
+    display: block;
+  }
+
+  .about .content div {
+    width: 100%;
+    margin: 40px auto;
+  }
+
+  .about .content img {
+    display: block;
+    margin: 0 auto;
+    height: 60%;
+    width: 100%;
+  }
+
+  .services .cards .card {
+    width: 70%;
+    margin: 10px;
+  }
+
+  .work .projects .project {
+    width: 45%;
+  }
+
+  .contact .fields {
+    margin: 0;
+  }
+
+  .contact form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contact form input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .menu .btn-menu {
+    width: 30px;
+    height: 30px;
+    background-size: 20px;
+  }
+  .subtitle {
+    font-size: 0.1em;
+  }
+
+  p {
+    font-size: 0.8em;
+  }
+
+  .home .content {
+    padding: 16px 36px;
+  }
+
+  .home .content .header span {
+    font-size: 0.7em;
+    padding: 5px;
+  }
+
+  .home .content .personal-data p {
+    padding: 0;
+    margin-right: 20px;
+  }
+
+  .home .content .btn-cv {
+    display: block;
+    text-align: center;    
+    font-size: 0.8em;
+    margin-right: 20px;
+  }
+
+  .work .projects .project {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 420px) {
+
+  .home .content .personal-data h1 {
+    font-size: 1.5em;
+  }
+
+  .home .content .personal-data h2 {
+    font-size: 0.9em;
+  }
+}

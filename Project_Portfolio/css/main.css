@@ -1,0 +1,51 @@
+@import url("reset.css");
+@import url("variables.css");
+@import url("home.css");
+@import url("about.css");
+@import url("services.css");
+@import url("works.css");
+@import url("contact.css");
+@import url("media-queries.css");
+@import url("cv-left.css");
+@import url("cv-right.css");
+
+/*Faz o scroll suave entre as seções*/
+* {
+  scroll-behavior: smooth; 
+  box-sizing: border-box;   
+}
+
+body {
+  font-family: Poppins, sans-serif;
+}
+
+.section {
+  min-height: 100vh;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.subtitle::after {
+  content: '';
+  display: block;
+  border-bottom: 3px solid var(--color-primary);
+  width: 50px;
+  margin: 10px auto;
+}
+
+@media (max-width: 700px) {
+  .subtitle {
+    font-size: 1.2em;
+  }
+}

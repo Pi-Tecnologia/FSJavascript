@@ -1,0 +1,60 @@
+.home {
+    height: 100vh;
+    background-image: url(../images/bg-home.jpg);
+    background-size: cover;
+    color: white;
+    background-attachment: fixed;
+}
+
+.home .header {
+    padding-top: 20px;
+}
+
+.home .header .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.home .header .navbar li {
+    margin: 0 30px;
+}
+
+.home .header .navbar li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.home .header .navbar li a:hover {
+    color: var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.home .header .banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 270px;
+    width: 770px;
+    margin-left: -435px;
+    margin-top: -75px;
+    text-align: center;
+}
+
+.home .header .banner .slogan1 {
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.home .header .banner h1 {
+    font-size: 110px;
+    font-weight: bold;
+}
+
+.home .header .banner p {
+    margin-bottom: 20px;
+}

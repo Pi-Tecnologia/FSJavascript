@@ -1,0 +1,90 @@
+.about {
+    background-color: var(--color-primary);
+}
+
+.about .container {
+    display: flex;
+}
+
+.about .container .timing {
+    position: relative;
+    top: -50px;
+    width: 33%;
+    background-image: url(../images/brush-big.jpg);
+    padding: 20px;
+    text-align: center;
+}
+
+.about .container .timing .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px 20px;
+}
+
+.about .container .timing .overlay img {
+    height: 60px;
+}
+
+.about .container .timing .overlay h3 {
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--color-primary);
+    padding: 10px;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--color-primary);
+    width: fit-content;
+    margin: 0 auto 30px auto;
+}
+
+.about .container .timing .overlay .text::after {
+    content: "•";
+    display: block;
+    color: white;
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.about .container .timing .overlay .text:last-of-type:after {
+    content: "|";
+}
+
+.about .container .timing .overlay .text h4 {
+    color: gray;
+    font-weight: 100;
+}
+
+.about .container .timing .overlay span {
+    color: white;
+}
+
+.about .container .timing .overlay img {
+    height: 35px;
+}
+
+.about .container .experience {
+    width: 66%;
+    padding: 100px 0 0 80px;
+    color: white;
+}
+
+.about .container .experience h2 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.about .container .experience h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #a38f78;
+    margin: 20px 0;
+}
+
+.about .container .experience .text {
+    display: flex;
+}
+
+.about .container .experience .text p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}

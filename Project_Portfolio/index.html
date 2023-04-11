@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio - Fábio Celestino</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+  <div class="menu">
+    <div class="sidebar">
+      <ul>
+        <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu()">Sobre</a></li>
+        <li><a href="#services" onclick="toggleMenu()">Serviços</a></li>
+        <li><a href="#work" onclick="toggleMenu()">Projetos</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contato</a></li>
+      </ul>
+    </div>
+    <div class="btn-menu" onclick="toggleMenu()"></div>
+  </div>
+
+  <section class="home section" id="home">
+      
+    <div class="img-background">
+      <img src="./images/bg.jpg" alt="Fábio Celestino">
+    </div>
+
+    <div class="content">
+
+      <div class="header">
+          <span>Portfólio</span>
+      </div>
+
+      <div class="personal-data">
+          <h1>Fábio Celestino</h1>
+          <h2>Desenvolvedor Front End</h2>
+          <p>
+            Criando e desenvolvendo sites simples e bonitos. Nada é mais sofisticado que a simplicidade.
+          </p>
+          <a href="./curriculo.html" class="btn-cv" target="_blank">Ver Curriculo</a>
+      </div>
+
+      <ul class="social-media">
+        <li>
+          <a href="https://www.linkedin.com/feed/" target="_blank"><img src="./images/logo-linkedin.png" alt="Linkedin"/></a>          
+        </li>
+        <li>
+          <a href="https://github.com/" target="_blank"><img src="./images/logo-github.png" alt="GitHub"/></a>          
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank"><img src="./images/logo-instagram.png" alt="Instagram"/></a>          
+        </li>
+        <li>
+          <a href="https://pt-br.facebook.com/" target="_blank"><img src="./images/logo-facebook.png" alt="Facebook"/></a>          
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+    <div class="container">
+      <h2 class="subtitle">Informações Pessoais</h2>
+      <div class="content">
+        <div>
+          <p>Olá, sou Fabio. Durante minha carreira como profissinal na área de TI já experimentei diversas ferramentas e áreas de atuação. Entre outras habilidades, já trabalhei na diagramação de livros, desenvolvimento e criação de logomarcas. Nos últimos anos, contribui com projetos de layout de produtos digitais para uso comercial. Sempre curioso e trabalhando para melhorar minhas habilidades.</p>
+
+          <p>A principal área de minha experiência é desenvolvimento front-end, HTML, CSS, JS e codificação de layouts interativos. Se você é uma empresa que busca uma presença na web ou está procurando contratar, entre em contato comigo.</p>
+        </div>
+        <img src="./images/bg1.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="title">
+        <h2 class="subtitle">Nossos Serviços</h2>
+        <span>Tudo que você precisa para desenvolver seu site</span>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <img src="./images/icon1.png" alt="Web Designer">
+          <h3>Web Designer</h3>
+          <p>Desenvolvimento de sites que fortaleçam a marca da sua empresa, garantindo facilidade de uso e simplicidade para o seu público.</p>
+        </div>
+
+        <div class="card">
+          <img src="./images/icon2.png" alt="Desenvolvimento de Sites">
+          <h3>Desenvolvimento de Sites</h3>
+          <p>Sites responsivos criados para uma experiência de usuário ideal. Torne seu site rápido, fácil de encontrar e alcance o maior público possível.</p>
+        </div>
+
+        <div class="card">
+          <img src="./images/icon3.png" alt="Desenvolvimento de Aplicações Web">
+          <h3>Desenvolvimento de Aplicações</h3>
+          <p>Desde uma simples landpage, sites pessoais ou comercial, até lojas virtuais e sistemas complexos para internet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="work">
+    <div class="container">
+      <div class="title">
+        <h2 class="subtitle">Projetos Recentes</h2>
+        <span>Aqui estão alguns projetos anteriores em que trabalhei.</span>
+      </div>
+      <div class="projects">
+        <div class="project">
+          <img src="./images/img1.jpg" alt="">
+          <span>Projeto 01</span>
+        </div>
+        <div class="project">
+          <img src="./images/img1.jpg" alt="">
+          <span>Projeto 02</span>
+        </div>
+        <div class="project">
+          <img src="./images/img1.jpg" alt="">
+          <span>Projeto 03</span>
+        </div>
+        <div class="project">
+          <img src="./images/img1.jpg" alt="">
+          <span>Projeto 04</span>
+        </div>
+        <div class="project">
+          <img src="./images/img1.jpg" alt="">
+          <span>Projeto 05</span>
+        </div>
+        <div class="project">
+          <img src="./images/img1.jpg" alt="">
+          <span>Projeto 06</span>
+        </div>
+      </div>
+  </section>
+
+  <section class="contact section" id="contact">
+    <div class="container">
+      <h2 class="subtitle">Contato</h2>
+      <form>
+        <div class="fields">
+          <input type="text" id="nome" placeholder="Nome">
+          <input type="text" id="sobrenome" placeholder="Sobrenome">
+        </div>
+        <div class="fields">
+          <input type="email" id="email" placeholder="E-mail">
+          <input type="tel" id="telefone" placeholder="Telefone">
+        </div>
+        <textarea id="message" rows="5" placeholder="Mensagem"></textarea>
+        <button>Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    &copy 2022 Todos os direitos reservados
+  </footer>
+
+
+  <script>
+    /* Alterna (toggle) entre Menu hamburger e Fechar e ao esolher a opção fecha a barra de menus    
+     * adicionando a classe 'close' configurada no css
+    */
+    function toggleMenu() {
+    document.querySelector('.btn-menu').classList.toggle('close')
+    document.querySelector('.sidebar').classList.toggle('close')
+  }       
+  </script>
+</body>
+</html>

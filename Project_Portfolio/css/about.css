@@ -1,0 +1,39 @@
+.about {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 25vh 0;
+}
+
+.about .subtitle {
+  color: white;
+}
+
+.about .subtitle::after {
+  border-bottom: 3px solid white;
+}
+
+.about .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.about .content div {
+  width: 40%;
+  font-size: 1em;
+}
+
+.about .content img {
+  padding: 0 30px;
+  margin-left: 50px;
+  width: 30%;
+  height: 100%;
+}
+
+.about .content p {
+  margin-top: 15px;
+  letter-spacing: 1px;
+  line-height: 1.4em;
+  text-align: justify;
+}

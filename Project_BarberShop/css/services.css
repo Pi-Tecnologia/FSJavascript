@@ -1,0 +1,36 @@
+.services {
+    padding: 90px 0;
+    text-align: center;
+    color: var(--color-primary-ligth);
+}
+
+.services .container h2 {
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--color-secondary);
+    margin: 90px 0 20px 0;
+}
+
+.services .container .boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.services .container .boxes .box {
+    border: 3px solid var(--color-primary);
+    margin: 30px;
+    padding: 50px;
+}
+
+.services .container .boxes .box img {
+    margin: 20px;
+}
+
+.services .container .boxes .box h4 {
+    color: var(--color-secondary);
+}
+
+.services .container .boxes .box p {
+    line-height: 28px;
+}

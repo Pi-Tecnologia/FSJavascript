@@ -1,0 +1,52 @@
+.work {
+  margin-bottom: 5vh;
+}
+
+.work .title {
+  text-align: center;
+}
+
+.work .title span {
+  display: block;
+  margin: 10px auto 30px auto;
+  width: 70%;
+  letter-spacing: 0.5px;
+  line-height: 1.2em;
+}
+
+.work .projects {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.work .projects .project {
+  position: relative;
+  width: 32%;
+  margin: 10px 0;
+}
+
+.work .projects .project span {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: calc(50% - 50px);
+  color: white;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+.work .projects .project img {
+  width: 100%;
+}
+
+.work .projects .project:hover img {
+  opacity: 0.8;
+}
+
+.work .projects .project:hover span {
+  display: block;
+}

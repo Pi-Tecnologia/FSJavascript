@@ -1,0 +1,75 @@
+.cv-right {
+  width: 75%;
+  padding: 40px;
+}
+
+.cv-right h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.cv-right .profile p {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.cv-right .profile p:last-of-type {
+  content: '';
+  display: block;
+  margin-bottom: 50px;
+}
+
+.cv-right .skill .progress-bar {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.cv-right .skill .progress-bar span {
+  width: 150px;
+}
+
+.cv-right .skill .progress-bar div {
+  position: relative;
+  width: 100%;
+}
+
+.cv-right .skill .progress-bar .line-total {
+  background-color: silver;
+  width: 100%;
+  height: 7px;
+}
+
+.cv-right .skill .progress-bar .line-html {
+  background-color: var(--color-primary);
+  width: 95%;
+  height: 7px;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
+
+.cv-right .skill .progress-bar .line-css {
+  background-color: var(--color-primary);
+  width: 75%;
+  height: 7px;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
+
+.cv-right .skill .progress-bar .line-js {
+  background-color: var(--color-primary);
+  width: 35%;
+  height: 7px;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}

@@ -1,0 +1,67 @@
+body {
+    font-family: Raleway;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-family: "Pt Sans";
+    letter-spacing: -1px;
+}
+
+h2 {
+    margin-top: 0;
+    font-style: italic;
+}
+
+h4 {
+    margin: 0;
+}
+
+h5 {
+    margin: 0;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.container {
+    background-color: rgb(245, 245, 245);
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px 20px 20px;
+    box-shadow: 0 0 10px rgb(170, 170, 170);
+}
+
+.header {
+    text-align: center;
+}
+
+.img-photo {
+    width: 200px;
+    margin-top: 20px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(200, 200, 200);
+}
+
+.img-social {
+    width: 20px;
+}
+
+.github {
+    margin: 0 15px;
+}
+
+.empresas {
+    margin-left: 20px;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+}
