@@ -13,7 +13,16 @@
       input {
         margin-bottom: 10px;
       }
-
+      .hidden {
+        display: none;
+        color: red;
+      }
+      .erro {
+        border-color: red;
+      }
+      .red {
+        color: red;
+      }
     </style>
 
 </head>
@@ -21,23 +30,24 @@
   <h1>Consultar CEP</h1><hr><br>
 
   <form id="formEndereco">
-    <label for="CEP">CEP:</label>
-    <input type="text" name="cep" placeholder="Digite um CEP">
+    <label class="">CEP:</label>
+    <input class="" type="text" name="cep" placeholder="Digite um CEP">
+    <span class="hidden red">CEP inválido</span>
 
     <label>Rua:</label>
     <input type="text" name="rua" size="50">
 
     <label>Bairro:</label>
-    <input type="text" name="bairro" size="50">
+    <input type="text" name="bairro" size="50" readonly>
 
     <label>Cidade:</label>
-    <input type="text" name="cidade" size="50">
+    <input type="text" name="cidade" size="50" readonly>
 
     <label>Estado:</label>
-    <input type="text" name="estado">
-    
+    <input type="text" name="estado" readonly>
+
     <label>IBGE:</label>
-    <input type="text" name="ibge">
+    <input type="text" name="ibge" readonly>
   </form>
 
   <script src="./js/main.js"></script>

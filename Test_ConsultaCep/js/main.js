@@ -5,11 +5,17 @@ const inputCidade = document.forms['formEndereco']['cidade']
 const inputEstado = document.forms['formEndereco']['estado']
 const inputIbge = document.forms['formEndereco']['ibge']
 
+const span = document.querySelector('span')
+
 function dataJSON(response) {
   return response.json()
 }
 
 function consultaCep(data) {
+  span.classList.add('hidden')
+  inputCep.classList.remove('red')
+  inputCep.classList.remove('erro')
+
   const { logradouro, bairro, localidade, uf, ibge } = data
 
   inputRua.value = logradouro
@@ -20,19 +26,24 @@ function consultaCep(data) {
 }
 
 function error() {
-  console.log('Erro!')
+  span.classList.remove('hidden')
+  inputCep.classList.add('red')
+  inputCep.classList.add('erro')
+
+  inputRua.value = ''
+  inputBairro.value = ''
+  inputCidade.value = ''
+  inputEstado.value = ''
+  inputIbge.value = ''
 }
 
 async function exitInput() {
-  console.log(inputCep.value.length)
-  if (inputCep.value.length === 8) {
-    const cepPesquisado = inputCep.value
-  
-    const dadosCep = await fetch(`https://viacep.com.br/ws/${cepPesquisado}/json/`)
-      .then(dataJSON)
-      .then(consultaCep)
-      .catch(error)    
-  }
+  const cepPesquisado = inputCep.value
+
+  await fetch(`https://viacep.com.br/ws/${cepPesquisado}/json/`)
+    .then(dataJSON)
+    .then(consultaCep)
+    .catch(error)
 }
 
 inputCep.onblur = exitInput
