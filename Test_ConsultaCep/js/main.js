@@ -7,26 +7,16 @@ const inputIbge = document.forms['formEndereco']['ibge']
 
 const span = document.querySelector('span')
 
-inputCep.onblur = exitInput
+inputCep.onblur = onExitInput
 
-async function exitInput() {
+async function onExitInput() {
   const cepPesquisado = inputCep.value
 
-  await fetch(`https://viacep.com.br/ws/${cepPesquisado}/json/`)
-    .then(dataJSON)
-    .then(cepEncontrado)
-    .catch(error)
-}
+  const resultado = await fetch(`https://viacep.com.br/ws/${cepPesquisado}/json/`).then((data) => data.json())
+  const { logradouro, bairro, localidade, uf, ibge } = resultado
 
-function dataJSON(response) {
-  return response.json()
-}
-
-function cepEncontrado(data) {
   span.classList.add('hidden')
   inputCep.classList.remove('red', 'erro')
-
-  const { logradouro, bairro, localidade, uf, ibge } = data
 
   inputRua.value = logradouro
   inputBairro.value = bairro
