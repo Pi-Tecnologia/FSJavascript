@@ -1,0 +1,36 @@
+.container {
+  width: 80%;
+  margin: 32px auto;
+  color: var(--text-color-primary);
+}
+
+.top-section {
+  display: flex;
+}
+
+.top-section .content {
+  width: 50%;
+}
+
+.top-section div {
+  width: 50%;
+  padding-left: 60px;
+}
+
+.top-section #form-cadastro div.input {
+  width: 100%;
+}
+
+.top-section #form-cadastro div.input label,
+.top-section #form-cadastro div.input input {
+  display: block;
+  font-size: 12px;
+}
+
+.top-section #form-cadastro div.input input {
+  width: 100%;
+  margin: 5px 0 32px 0;
+  height: 30px;
+  border: 1px solid #707070;
+  padding: 5px;
+}
