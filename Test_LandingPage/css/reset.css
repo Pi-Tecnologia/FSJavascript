@@ -1,6 +1,14 @@
 * {
+  font-family: Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Helvetica, sans-serif;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+}
+
+ol,
+ul {
+    list-style: none;
 }

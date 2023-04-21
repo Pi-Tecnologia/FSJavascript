@@ -66,7 +66,9 @@
 }
 
 .products-list h2::before,
-.products-list h2::after {
+.products-list h2::after,
+.share h2::before,
+.share h2::after {
   content: "";
   display: inline-block;
   position: relative;
@@ -76,12 +78,14 @@
   vertical-align: middle;
 }
 
-.products-list h2::before {
+.products-list h2::before,
+.share h2::before {
   right: 0.5em;
   margin-left: -37%;
 }
 
-.products-list h2::after {
+.products-list h2::after,
+.share h2::after {
   left: 0.5em;
   margin-right: -37%;
 }
@@ -136,6 +140,7 @@
   background-color: var(--color-secondary);
   border: 1px solid var(--color-primary);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .products-list .btn-next-page {
@@ -148,5 +153,50 @@
   border-radius: 4px;
   font-size: 16px;
   color: var(--text-color-primary);
+  cursor: pointer;
+}
+
+.share h2 {
+  margin: 128px 0 48px 0;
+  text-align: center;
+}
+
+.share p {
+  margin-bottom: 40px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.share #form-share {
+  display: flex;
+  justify-content: center;
+}
+
+.share #form-share div {
+  margin-left: 30px;
+}
+
+.share #form-share label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 7px;
+}
+
+.share #form-share input {
+  width: 340px;
+  height: 30px;
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-primary);
+}
+
+.share button {
+  display: block;
+  width: 260px;
+  height: 39px;
+  margin: 48px auto 72px auto;
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  font-size: 16px;
   cursor: pointer;
 }
