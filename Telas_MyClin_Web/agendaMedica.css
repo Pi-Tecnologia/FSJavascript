@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: rgb(240, 240, 240);
+  font-family: 'Poppins', sans-serif;
+}
+
+/*** HEADER ***/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 50px;
+  background-color: rgb(4, 110, 180);
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+}
+
+header .title {
+  margin-left: 20px;
+  font-size: 1.5em;
+}
+
+header .name {
+  margin-right: 20px;
+}
+
+/*** CONTEUDO ***/
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.container .content {
+  width: 70%;
+  height: 80vh;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 5px rgb(200, 200, 200);
+}
+
+.container .content .title {
+  display: flex;
+  margin: 20px;
+  align-items: center;
+  color: rgb(154, 154, 154);
+}
+
+.container .content .title i {
+  margin-right: 10px;
+  color: rgb(154, 154, 154);
+}
+
+.container .content .title input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 1em;
+}
+
+.container .content .patientCard {
+  margin: 12px auto;
+  width: 98%;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px silver;
+}
+
+
+
+
+
+
+.container .tools {
+  width: 25%;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 5px rgb(200, 200, 200);
+}
