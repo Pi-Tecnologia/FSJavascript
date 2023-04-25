@@ -6,27 +6,29 @@ header {
   padding: 60px;
   margin: 0 auto;
   text-align: center;
-  color: var(--text-color-secondary);
 }
 
-header .content{
-    width: 60%;
-    margin: 0 auto;
+header .content {
+  width: 60%;
+  margin: 0 auto;
 }
 
 header h1 {
   font-size: 40px;
+  color: var(--text-color-secondary);
   margin-bottom: 32px;
 }
 
 header h2 {
   font-size: 20px;
   font-weight: 100;
+  color: var(--text-color-secondary);
 }
 
 header h3 {
   font-size: 14px;
   font-weight: 100;
+  color: var(--text-color-secondary);
 }
 
 header .navbar {
@@ -49,6 +51,7 @@ header .btn-navigation {
   border: 1px solid var(--color-primary);
   border-radius: 4px;
   cursor: pointer;
+  z-index: 1;
 }
 
 header #triangulo {
@@ -58,4 +61,28 @@ header #triangulo {
   width: 100%;
   border-right: 100vw solid transparent;
   border-bottom: 140px solid var(--color-secondary);
+}
+
+@media (max-width: 420px) {
+header {
+  padding: 60px 16px;
+  text-align: left;
+}
+
+header .content {
+  width: 100%;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+
+header .navbar {
+  flex-wrap: wrap;
+}
+
+header .btn-navigation {
+  margin-bottom: 20px;
+}
+
 }

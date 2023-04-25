@@ -24,6 +24,7 @@
 
 .top-section #form-cadastro div.input {
   width: 100%;
+  margin: 0;
 }
 
 .top-section #form-cadastro div.input label,
@@ -199,4 +200,50 @@
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+}
+
+@media (max-width: 420px) {
+.container {
+  width: 100%;
+  margin: 0;
+}
+
+.top-section {
+  display: block;
+}
+
+.top-section .content {
+  width: 100%;
+  margin: 0;
+  padding: 16px;
+}
+
+.top-section div {
+  width: 100%;
+  margin: 0 16px;
+}
+
+.products-list .products .product {
+  display: flex;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.products-list .products .product .image {
+  margin-right: 24px;
+}
+
+.share #form-share {
+  flex-direction: column;
+  width: 100%;
+}
+
+.share #form-share div {
+  margin: 0 16px 20px;
+}
+
+.share #form-share div input {
+  width: 100%;
+}
+
 }

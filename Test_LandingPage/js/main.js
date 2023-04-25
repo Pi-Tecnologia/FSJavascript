@@ -11,13 +11,15 @@ async function funcaoprodutos(adress) {
   products.forEach(item => {
     divProducts.innerHTML += `
     <div class="product">
-    <img class="image" src=${item.image} alt="Imagem do Produto">
-    <span class="name">${item.name}</span>
-    <p class="description">${item.description}</p>
-    <p class="old-price">De: R$ ${item.oldPrice.toFixed(2)}</p>
-    <span class="new-price">Por: R$ ${item.price.toFixed(2)}</span>
-    <p class="installment">ou ${item.installments.count}x de R$ ${item.installments.value.toFixed(2)}</p>
-    <button>Comprar</button>
+      <img class="image" src=${item.image} alt="Imagem do Produto">
+      <div class="product-description">
+        <span class="name">${item.name}</span>
+        <p class="description">${item.description}</p>
+        <p class="old-price">De: R$ ${item.oldPrice.toFixed(2)}</p>
+        <span class="new-price">Por: R$ ${item.price.toFixed(2)}</span>
+        <p class="installment">ou ${item.installments.count}x de R$ ${item.installments.value.toFixed(2)}</p>
+        <button>Comprar</button>
+      </div>
     </div>
     `
   })
