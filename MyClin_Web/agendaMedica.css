@@ -51,6 +51,7 @@ header .name {
   margin: 20px;
   align-items: center;
   color: rgb(154, 154, 154);
+  border-bottom: 1px solid silver;
 }
 
 .container .content .title i {
@@ -62,15 +63,61 @@ header .name {
   width: 100%;
   padding: 10px;
   outline: none;
+  border: none;
   font-size: 1em;
 }
 
 .container .content .patientCard {
-  margin: 12px auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px;
   width: 98%;
   padding: 10px;
   border-radius: 3px;
-  box-shadow: 0 0 5px silver;
+  box-shadow: 0 0 3px silver;
+  font-size: 0.8em;
+}
+
+.container .content .patientCard.preference {
+  color: darkblue;
+}
+
+.container .content .patientCard .time {
+  width: 60px;
+}
+
+.container .content .patientCard .name {
+  width: 350px;
+  }
+
+.container .content .patientCard .status {
+  width: 150px;
+  }
+
+.container .content .patientCard .insurance {
+  width: 250px;
+  }
+
+.container .content .patientCard .type {
+  width: 410px;
+}
+
+.container .content .patientCard .prioritary {
+  width: 150px;
+}
+
+.container .content .patientCard .icons {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+}
+
+.container .content .patientCard .icons i {
+  margin-left: 3px;
+  font-size: 1.5em;
+  color: rgb(4, 110, 180);
+  cursor: pointer;
 }
 
 
