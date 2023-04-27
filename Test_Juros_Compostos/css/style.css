@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  width: 400px;
+  margin-left: 20px;
+}
+
+.simulador {
+  display: block;
+}
+
+.simulador.hidden {
+  display: none;
+}
+
+.simulador h1, h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.simulador #formSimulador label,
+.simulador #formSimulador button {
+  display: block;
+}
+
+.simulador #formSimulador input {
+  margin-bottom: 10px;
+}
+
+.resultado p {
+  font-weight: bold;
+}

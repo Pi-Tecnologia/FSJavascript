@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Ciclic - Juros Compostos</title>
+</head>
+<body>
+  <div class="simulador">
+    <h1>Ciclic</h1>
+    <h2>Simulador</h2>
+
+    <form id="formSimulador">
+      <label>Nome:</label>
+      <input type="text" class="nome" name="nome">
+
+      <label>Mensalidade:</label>
+      <input type="text" class="mensalidade" name="mensalidade">
+
+      <label>Taxa de Juros:</label>
+      <input type="text" class="taxa" name="taxa"><span> % ao mês </span>
+
+      <label>Tempo de Contribuição:</label>
+      <input type="text" class="tempo" name="tempo"><span> meses </span>
+
+      <button id="simulador" type="submit">Simular</button>
+    </form>
+  </div>
+
+  <div class="resultado">
+    <h2>Olá <span class="nomeCliente"></span>,</h2>
+    <p>Investindo R$ <span class="valorInvestido"></span> todo mês, você terá R$ <span class="resultadoInvestimento"></span> em <span class="meses"></span> meses</p>
+
+    <button class="simularNovamente">Simular Novamente</button>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
