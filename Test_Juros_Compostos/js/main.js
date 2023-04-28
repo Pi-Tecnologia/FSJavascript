@@ -1,26 +1,32 @@
 
 const formSimulador = document.querySelector('#formSimulador')
-
 const divSimulador = document.querySelector('.simulador')
+const divContentResultado = document.querySelector('.contentResultado')
+const btnSimularNovamente = document.querySelector('.simularNovamente')
+
+btnSimularNovamente.onclick = () => {
+  divSimulador.classList.remove('hidden')
+  divContentResultado.classList.add('hidden')
+}
 
 formSimulador.onsubmit = async function resultadoAPI(e) {
   e.preventDefault()
 
-
-  const nome = document.forms['formSimulador']['nome'].value
-  const mensalidade = parseInt(document.forms['formSimulador']['mensalidade'].value)
-  const inputTaxa = document.forms['formSimulador']['taxa'].value
-  const tempo = parseInt(document.forms['formSimulador']['tempo'].value)
+  const nome = document.forms['formSimulador']['nome']
+  const mensalidade = document.forms['formSimulador']['mensalidade']
+  const inputTaxa = document.forms['formSimulador']['taxa']
+  const tempo = document.forms['formSimulador']['tempo']
 
   const nomeCliente = document.querySelector('.nomeCliente')
   const valorInvestido = document.querySelector('.valorInvestido')
   const meses = document.querySelector('.meses')
   const resultadoInvestimento = document.querySelector('.resultadoInvestimento')
-
-  const taxa = parseFloat((inputTaxa.replace(",", "."))/100)
+  
+  /***** CONSULTA A API *****/
+  const taxa = parseFloat((inputTaxa.value.replace(",", "."))/100)
 
   const expr = {
-    "expr": `${mensalidade} * (((1 + ${taxa})) ^ ${tempo} - 1) / ${taxa}`
+    "expr": `${parseInt(mensalidade.value)} * (((1 + ${taxa})) ^ ${parseInt(tempo.value)} - 1) / ${taxa}`
   }
 
   const resultado = await fetch('http://api.mathjs.org/v4/', {
@@ -34,16 +40,11 @@ formSimulador.onsubmit = async function resultadoAPI(e) {
   const valorFinal = parseFloat(resultado.result)
 
 
-
-  nomeCliente.innerText = nome
-  valorInvestido.innerText = mensalidade.toFixed(2)
-  resultadoInvestimento.innerText = valorFinal.toFixed(2)
-  meses.innerText = tempo
+  /***** PREENCHIMENTO DA TELA DE RESULTADO *****/
+  nomeCliente.innerHTML = nome.value
+  valorInvestido.innerHTML = parseInt(mensalidade.value).toFixed(2)
+  resultadoInvestimento.innerHTML = valorFinal.toFixed(2)
+  meses.innerHTML = tempo.value
   divSimulador.classList.add('hidden')
-}
-
-const btnSimularNovamente = document.querySelector('.simularNovamente')
-
-btnSimularNovamente.onclick = () => {
-  divSimulador.classList.remove('hidden')
+  divContentResultado.classList.remove('hidden')
 }

@@ -3,24 +3,38 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  font-family: Verdana, sans-serif;
 }
 
 body {
   width: 400px;
-  margin-left: 20px;
+  margin: 0 auto;
+  background-color: rgb(249, 249, 249);
 }
 
-.simulador {
-  display: block;
+header {
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px;
+  text-align: center;
+  border: 2px solid orange;
+  box-shadow: 1px 1px 3px rgb(197, 197, 197);
+  color: rgb(221, 144, 0);
+}
+
+.simulador .content,
+.contentResultado {
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid orange;
 }
 
 .simulador.hidden {
   display: none;
 }
 
-.simulador h1, h2 {
-  text-align: center;
-  margin-bottom: 10px;
+.simulador h2 {
+  margin-bottom: 20px;
 }
 
 .simulador #formSimulador label,
@@ -28,10 +42,73 @@ body {
   display: block;
 }
 
+.simulador #formSimulador label {
+  margin-bottom: 2px;
+  font-size: 0.8em;
+}
+
 .simulador #formSimulador input {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border: none;
+  box-shadow: 1px 1px 1px gray;
+}
+
+.simulador #formSimulador input:invalid {
+  color: red;
+  border-left: 1px solid red;
+}
+
+.simulador #formSimulador input.nome {
+  width: 100%;
+}
+
+.simulador #formSimulador input.mensalidade {
+  width: 100px;
+}
+
+.simulador #formSimulador input.taxa {
+  width: 90px;
+}
+
+.simulador #formSimulador input.tempo {
+  width: 80px;
+}
+
+.simulador #formSimulador span {
+  font-size: 0.8em;
+}
+
+.simulador #formSimulador button#simulador,
+.resultado button.simularNovamente {
+  display: block;
+  width: 50%;
+  margin: 20px auto;
+  padding: 5px;
+  background-color: rgb(221, 144, 0);
+  border: none;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+
+.simulador #formSimulador button#simulador:hover,
+.resultado .simularNovamente:hover {
+  opacity: 0.7;
+  color: black;
+}
+
+.contentResultado.hidden {
+  display: none;
+}
+
+.resultado h2 {
+  margin: 20px 0;
+  font-size: medium;
+  font-weight: 600;
 }
 
 .resultado p {
-  font-weight: bold;
+  font-size: small;
+  line-height: 1.8;
 }

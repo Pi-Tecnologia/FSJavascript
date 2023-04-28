@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,35 +9,45 @@
 
   <title>Ciclic - Juros Compostos</title>
 </head>
+
 <body>
-  <div class="simulador">
+  <header>
     <h1>Ciclic</h1>
-    <h2>Simulador</h2>
+  </header>
+  <div class="simulador">
+    <div class="content">
+      <h2>Simulador</h2>
 
-    <form id="formSimulador">
-      <label>Nome:</label>
-      <input type="text" class="nome" name="nome">
+      <form id="formSimulador">
+        <label>Nome</label>
+        <input type="text" class="nome" name="nome" placeholder="Digite o seu nome" required>
 
-      <label>Mensalidade:</label>
-      <input type="text" class="mensalidade" name="mensalidade">
+        <label>Mensalidade</label>
+        <input type="text" class="mensalidade" name="mensalidade" placeholder="Valor mensal" required>
 
-      <label>Taxa de Juros:</label>
-      <input type="text" class="taxa" name="taxa"><span> % ao mês </span>
+        <label>Taxa de Juros</label>
+        <input type="text" class="taxa" name="taxa" required><span> % ao mês </span>
 
-      <label>Tempo de Contribuição:</label>
-      <input type="text" class="tempo" name="tempo"><span> meses </span>
+        <label>Tempo de Contribuição</label>
+        <input type="text" class="tempo" name="tempo" required><span> meses </span>
 
-      <button id="simulador" type="submit">Simular</button>
-    </form>
+        <button id="simulador" type="submit">Simular</button>
+      </form>
+    </div>
   </div>
 
-  <div class="resultado">
-    <h2>Olá <span class="nomeCliente"></span>,</h2>
-    <p>Investindo R$ <span class="valorInvestido"></span> todo mês, você terá R$ <span class="resultadoInvestimento"></span> em <span class="meses"></span> meses</p>
+  <div class="contentResultado hidden">
+    <div class="resultado">
+      <h2>Olá <span class="nomeCliente"></span>,</h2>
+      <p>Investindo <strong>R$ <span class="valorInvestido"></span></strong> todo mês, você terá: <br>
+        <strong>R$ <span class="resultadoInvestimento"></span></strong> em <span class="meses"></span> meses
+      </p>
 
-    <button class="simularNovamente">Simular Novamente</button>
+      <button class="simularNovamente">Simular Novamente</button>
+    </div>
   </div>
 
   <script src="./js/main.js"></script>
 </body>
+
 </html>
