@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calendar</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"/>
+    <div class="card">
+      <div class="calendar-toolbar">
+        <button class="prev month-btn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="current-month"></div>
+        <button class="next month-btn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="calendar">
+        <div class="weekdays">
+          <div class="weekday-name">D</div>
+          <div class="weekday-name">S</div>
+          <div class="weekday-name">T</div>
+          <div class="weekday-name">Q</div>
+          <div class="weekday-name">I</div>
+          <div class="weekday-name">X</div>
+          <div class="weekday-name">B</div>
+        </div>
+        <div class="calendar-days"></div>
+      </div>
+      <div class="goto-buttons">
+        <button type="button" class="btn prev-year">Ano Anterior</button>
+        <button type="button" class="btn today">Hoje</button>
+        <button type="button" class="btn next-year">Próximo Ano</button>
+      </div>
+    </div>
+	<script src="script.js"></script>
+  </body>
+</html>
