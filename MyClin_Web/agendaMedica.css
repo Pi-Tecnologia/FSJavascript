@@ -11,6 +11,18 @@ html, body {
   font-family: 'Poppins', sans-serif;
 }
 
+.teste {
+  display: flex;
+}
+
+.menu {
+  width: 20%;
+}
+
+.container {
+  width: 80%;
+}
+
 /*** HEADER ***/
 header {
   display: flex;
@@ -46,7 +58,17 @@ header .name {
   box-shadow: 0 0 5px rgb(200, 200, 200);
 }
 
+.container .content .dataAgenda {
+  padding: 20px 0px 0px 25px;
+}
+
+.container .content .dataAgenda h2 {
+  color: rgb(96, 96, 96);
+  font-weight: 300;
+}
+
 .container .content .title {
+  position: relative;
   display: flex;
   margin: 20px;
   align-items: center;
@@ -54,9 +76,14 @@ header .name {
   border-bottom: 1px solid silver;
 }
 
-.container .content .title i {
+.container .content .title button {
+  position: absolute;
+  right: 5px;
   margin-right: 10px;
   color: rgb(154, 154, 154);
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  border: none;
 }
 
 .container .content .title input {
@@ -75,8 +102,12 @@ header .name {
   width: 98%;
   padding: 10px;
   border-radius: 3px;
-  box-shadow: 0 0 3px silver;
-  font-size: 0.8em;
+  box-shadow: 0 0 4px rgb(163, 163, 163);
+  font-size: 0.9em;
+}
+
+.container .content .patientCard span {
+  padding: 3px;
 }
 
 .container .content .patientCard.preference {
@@ -107,23 +138,61 @@ header .name {
   width: 150px;
 }
 
-.container .content .patientCard .icons {
+.container .content .patientCard button {
   position: absolute;
   right: 4px;
   bottom: 4px;
-}
-
-.container .content .patientCard .icons i {
-  margin-left: 3px;
-  font-size: 1.5em;
-  color: rgb(4, 110, 180);
   cursor: pointer;
+  border: none;
+  background-color: rgb(255, 255, 255);
 }
-
 
 .container .tools {
   width: 25%;
-  height: 100px;
+}
+
+.container .tools .calendar {
+  height: 300px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 0 5px rgb(200, 200, 200);
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.container .tools .doctor {
+  position: relative;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 5px rgb(200, 200, 200);
+  padding: 15px;
+}
+
+.container .tools .doctor h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.container .tools .doctor h2::after {
+  content: "";
+  display: block;
+  height: 1px;
+  border-bottom: 1px solid gray;
+}
+
+.container .tools .doctor .btnFilterOff,
+.container .tools .doctor .btnFilter {
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+  color: rgb(154, 154, 154);
+  background-color: rgb(255, 255, 255);
+  border: none;
+}
+
+.container .tools .doctor .btnFilterOff {
+  right: 15px;
+}
+
+.container .tools .doctor .btnFilter {
+  right: 55px;
 }
