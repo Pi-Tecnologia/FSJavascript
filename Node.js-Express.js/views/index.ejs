@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
   <%- include('partials/head.ejs') %>
 </head>
-
 <body>
   <%- include('partials/header.ejs') %>
 
-    <h1>Hello Word</h1>
+  <section class="container">
+    <%- include('partials/navbar.ejs') %>
 
-    <%- include('partials/footer.ejs') %>
+    <article class="content">
+      <h1>Seja bem vindo!</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A sunt eos suscipit optio, necessitatibus deleniti sint libero voluptate illo enim, officia debitis, eveniet accusamus porro? Voluptatum dolorum quae impedit fugiat.
+      </p>
 
-      <%- include('partials/foot.ejs') %>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A sunt eos suscipit optio, necessitatibus deleniti sint libero voluptate illo enim, officia debitis, eveniet accusamus porro? Voluptatum dolorum quae impedit fugiat.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A sunt eos suscipit optio, necessitatibus deleniti sint libero voluptate illo enim, officia debitis, eveniet accusamus porro? Voluptatum dolorum quae impedit fugiat.
+      </p>
+    </article>
+  </section>
+
+  <%- include('partials/footer.ejs') %>
+  <%- include('partials/foot.ejs') %>  
 </body>
-
 </html>
