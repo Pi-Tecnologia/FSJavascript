@@ -3,15 +3,23 @@ const path = require('path')
 
 const app = express()
 
+// definindo template engine
+app.set('view engine', 'ejs')
+
 // definindo os arquivos estáticos (views)
-app.use(express.static(path.join(__dirname, 'views')))
+// usar apenas se não usar template engine
+// app.use(express.static(path.join(__dirname, 'views')))
 
 // definindo os arquivos públicos (css e javascript)
 app.use(express.static(path.join(__dirname, 'public')))
 
 // rotas
 app.get('/', (req, res) => {
-  res.render('views/index')
+  res.render('index') // se não usar template engine colocar views/index
+})
+
+app.get('/posts', (req, res) => {
+  res.render('posts')
 })
 
 
