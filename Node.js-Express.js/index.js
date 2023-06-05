@@ -1,5 +1,6 @@
 const express = require('express')
 const path = require('path')
+const fs = require('fs')
 
 const app = express()
 
@@ -15,14 +16,18 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // rotas
 app.get('/', (req, res) => {
-  res.render('index') // se não usar template engine colocar views/index
+  res.render('index', {
+    title: 'Digital Tech - Home'
+  }) // se não usar template engine colocar views/index
 })
 
-app.get('/posts', (req, res) => {
-  res.render('posts')
+app.get('/posts', (req, res) => {  
+  const dados = fs.readFileSync('public/dados.json')
+  res.render('posts', {
+    title: 'Digital Tech - Posts',
+    posts: JSON.parse(dados)
+  })
 })
-
-
 
 
 // 404 error (not found)

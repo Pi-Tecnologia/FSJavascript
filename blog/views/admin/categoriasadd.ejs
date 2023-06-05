@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <%- include('partials/head') %>
+</head>
+
+<body>
+  <header>
+    <%- include('partials/header') %>
+  </header>
+
+  <div class="container mt-4">
+    <h3>Nova categoria</h3>
+
+    <div class="card card-body">
+      <form action="/admin/categorias/new" method="post">
+        <label>Categoria</label>
+        <input class="form-control" type="text" id="categoria" name="categoria"
+          placeholder="Digite o nome da categoria">
+        <br>
+        <label>Slug</label>
+        <input class="form-control" type="text" id="slug" name="slug" placeholder="Digite o slug da categoria">
+        <br>
+        <button class="btn btn-success">Criar categoria</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <%- include('partials/footer') %>
+  </footer>
+
+  <%- include('partials/foot') %>
+</body>
+
+</html>
