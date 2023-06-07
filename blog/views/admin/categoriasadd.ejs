@@ -11,12 +11,16 @@
   </header>
 
   <div class="container mt-4">
+    <% errors.forEach((erro) => { %>
+     <div class="alert alert-danger"><%= error.message %></div>
+    <% }) %>
+
     <h3>Nova categoria</h3>
 
     <div class="card card-body">
       <form action="/admin/categorias/new" method="post">
         <label>Categoria</label>
-        <input class="form-control" type="text" id="categoria" name="categoria"
+        <input class="form-control" type="text" id="categoria" name="nome"
           placeholder="Digite o nome da categoria">
         <br>
         <label>Slug</label>

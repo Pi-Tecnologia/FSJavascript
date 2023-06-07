@@ -6,12 +6,12 @@ const Categoria = new Schema({
   nome: {
     type: String,
     require: true
-  }
+  },
 
   slug: {
     type: String,
     require: true
-  }
+  },
 
   data: {
     type: Date,
