@@ -11,10 +11,30 @@
   </header>
 
   <div class="container mt-4">
+    <%- include('partials/msg') %>
     <h2>Lista de categorias</h2>
     <hr>
     <a href="/admin/categorias/add"><button class="btn btn-success">Nova categoria</button></a>
-  </div>
+
+    <% if (categorias.length > 0) { %>
+      <% categorias.forEach(categoria => { %>
+        <div class="card card-body mt-4">
+          <h4><%= categoria.nome %></h4>
+          <small>Slug: <%= categoria.slug %></small>
+          <small>Data de criação: <%= categoria.data %></small>
+          <a href="/admin/categorias/edit/<%= categoria.id %>"><button class="btn btn-success mt-2">Editar</button></a>
+
+          <form action="/admin/categorias/delete" method="post">
+            <input type="hidden" name="id" value="<%= categoria.id %>">
+            <button class="btn btn-danger mt-2">Deletar</button>
+          </form>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <h5 class="mt-4">Nenhuma categoria cadastrada</h4>
+    <% } %>
+
+    </div>
 
   <footer>
     <%- include('partials/footer') %>

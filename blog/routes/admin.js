@@ -10,14 +10,24 @@ router.get('/', (req, res) => {
 })
 
 router.get('/categorias', (req, res) => {
-  res.render('admin/categorias')
+  Categoria.find().sort({data: 'desc'})
+    .then((categorias) => {
+      res.render('admin/categorias', {categorias: categorias})
+    })
+    .catch((error) => {
+      req.flash("error_msg", "Erro ao listar as categorias.")
+      req.redirect('/admin')
+    })
 })
 
 router.get('/categorias/add', (req, res) => {
-  res.render('admin/categoriasadd')
+  res.render('admin/categoriasadd', {
+    error: [
+    ]
+  })
 })
 
-router.post('/categorias/new', (req, res) => {
+router.post('/categorias/add', (req, res) => {
   let errors = []
 
   if (!req.body.nome || typeof req.body.nome === undefined || req.body.nome === null) {
@@ -33,10 +43,10 @@ router.post('/categorias/new', (req, res) => {
   }
 
   if (errors.length > 0) {
-    res.render('admin/categoriasadd', {errors: errors})
+    res.render('admin/categoriasadd', {
+      error: errors
+    })
   }
-
-  console.log(errors)
 
   const newCategoria = {
     nome: req.body.nome,
@@ -44,8 +54,65 @@ router.post('/categorias/new', (req, res) => {
   }
 
   new Categoria(newCategoria).save()
-    .then(() => {console.log('Categoria salva com suceso')})
-    .catch((error) => {console.log('Erro ao salvar:' + error)})
+    .then(() => {
+      req.flash('success_msg', 'Categoria criada com sucesso!')
+      res.redirect("/admin/categorias")
+    })
+    .catch((error) => {
+      req.flash('error_msg', 'Erro ao salvar a categoria. Tente novamente.')
+      res.redirect('/admin')
+    })
+
+})
+
+router.get('/categorias/edit/:id', (req, res) => {
+  Categoria.findOne({'_id': req.params.id})
+    .then((categoria) => {
+      res.render('admin/categoriasedit', {
+        categoria: categoria,
+        error: [{}]
+      })
+    })
+    .catch((error) => {
+      req.flash('error_msg', 'Essa categoria não existe')
+      res.redirect('/admin/categorias')
+    })
+})
+
+router.post('/categorias/edit', (req, res) => {
+
+  Categoria.findOne({'_id': req.body.id})
+    .then((categoria) => {
+
+      categoria.nome = req.body.nome
+      categoria.slug = req.body.slug
+
+      categoria.save()
+        .then(() => {
+          req.flash('success_msg', 'Categoria alterada com sucesso.')
+          res.redirect('/admin/categorias')
+        })
+        .catch((error) => {
+          req.flash('error_msg', 'Erro interno ao tentar alterar a categoria. Tente novamente.')
+          res.redirect('/admin/categorias')
+        })
+    })
+    .catch((error) => {
+      req.flash('error_msg', 'Erro ao tentar alterar a categoria. Tente novamente.')
+      res.redirect('/admin/categorias')
+    })
+})
+
+router.post('/categorias/delete', (req, res) => {
+  Categoria.findOneAndRemove({'_id': req.body.id})
+    .then(() => {
+      req.flash('success_msg', 'Categoria deletada com sucesso.')
+      res.redirect('/admin/categorias')
+    })
+    .catch((error) => {
+      req.flash('error_msg', 'Erro ao tentar deletar a categoria. Tente novamente.')
+      res.redirect('/admin/categorias')
+    })
 })
 
 router.get('/posts', (req, res) => {
