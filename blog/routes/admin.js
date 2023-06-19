@@ -2,8 +2,10 @@ const router = require('express').Router()
 const mongoose = require('mongoose')
 
 require('../models/Categoria')
+require('../models/Postagem')
 
 const Categoria = mongoose.model('categorias')
+const Postagem = mongoose.model('postagens')
 
 router.get('/', (req, res) => {
   res.render('admin/index')
@@ -46,23 +48,22 @@ router.post('/categorias/add', (req, res) => {
     res.render('admin/categoriasadd', {
       error: errors
     })
+  } else {
+    const newCategoria = {
+      nome: req.body.nome,
+      slug: req.body.slug
+    }
+
+    new Categoria(newCategoria).save()
+      .then(() => {
+        req.flash('success_msg', 'Categoria criada com sucesso!')
+        res.redirect("/admin/categorias")
+      })
+      .catch((error) => {
+        req.flash('error_msg', 'Erro ao salvar a categoria. Tente novamente.')
+        res.redirect('/admin')
+      })
   }
-
-  const newCategoria = {
-    nome: req.body.nome,
-    slug: req.body.slug
-  }
-
-  new Categoria(newCategoria).save()
-    .then(() => {
-      req.flash('success_msg', 'Categoria criada com sucesso!')
-      res.redirect("/admin/categorias")
-    })
-    .catch((error) => {
-      req.flash('error_msg', 'Erro ao salvar a categoria. Tente novamente.')
-      res.redirect('/admin')
-    })
-
 })
 
 router.get('/categorias/edit/:id', (req, res) => {
@@ -115,8 +116,54 @@ router.post('/categorias/delete', (req, res) => {
     })
 })
 
-router.get('/posts', (req, res) => {
-  res.send('Pagina de posts')
+router.get('/postagens', (req, res) => {
+  res.render('admin/postagens')
+})
+
+router.get('/postagens/add', (req, res) => {
+  Categoria.find()
+    .then((categorias) => {
+      res.render('admin/postagensadd', {
+        'categorias': categorias,
+        'errors': []
+      })
+    })
+    .catch((error) => {
+      req.flash('error_msg', 'Erro ao carregar o formulário.')
+      res.render('/admin')
+    })
+})
+
+router.post('/postagens/add', (req, res) => {
+  let errors = []
+
+  if (req.body.categoria === "0") {
+    errors.push({message: 'Categoria inválida. Cadastre uma categoria.'})
+  }
+
+  if (errors.length > 0) {
+    res.render('admin/postagensadd', {
+      errors: errors
+    })
+  } else {
+    const newPostagem = {
+      titulo: req.body.titulo,
+      slug: req.body.slug,
+      descricao: req.body.descricao,
+      conteudo: req.body.conteudo,
+      categoria: req.body.categoria
+    }
+
+    new Postagem(newPostagem).save()
+      .then(() => {
+        req.flash('success_msg', 'Postagem salva com sucesso.')
+        res.redirect('/admin/postagens')
+      })
+      .catch((error) => {
+        req.flash('error_msg', 'Erro ao salvar a postagem. Tente novamente.')
+        res.redirect('/admin/postagens')
+      })
+  }
 })
 
 module.exports = router
