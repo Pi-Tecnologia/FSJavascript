@@ -22,12 +22,14 @@
           <h4><%= categoria.nome %></h4>
           <small>Slug: <%= categoria.slug %></small>
           <small>Data de criação: <%= categoria.data %></small>
-          <a href="/admin/categorias/edit/<%= categoria.id %>"><button class="btn btn-success mt-2">Editar</button></a>
+          <div class="d-flex">
+            <a class="mx-1" href="/admin/categorias/edit/<%= categoria.id %>"><button class="btn btn-success mt-2">Alterar</button></a>
 
-          <form action="/admin/categorias/delete" method="post">
-            <input type="hidden" name="id" value="<%= categoria.id %>">
-            <button class="btn btn-danger mt-2">Deletar</button>
-          </form>
+            <form action="/admin/categorias/delete" method="post">
+              <input type="hidden" name="id" value="<%= categoria.id %>">
+              <button class="btn btn-danger mt-2">Apagar</button>
+            </form>
+          </div>
         </div>
       <% }) %>
     <% } else { %>
