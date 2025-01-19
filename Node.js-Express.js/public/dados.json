@@ -1,0 +1,27 @@
+[
+  {
+    "title": "TÍTULO 1",
+    "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni corporis nihil, cupiditate corrupti possimus voluptatibus beatae consectetur sed eaque earum facilis amet recusandae, consequuntur dolorum. Iste quae itaque ex velit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni corporis nihil, cupiditate corrupti possimus voluptatibus beatae consectetur sed eaque earum facilis amet recusandae, consequuntur dolorum. Iste quae itaque ex velit.",
+    "stars": 1
+  },
+  {
+    "title": "TÍTULO 2",
+    "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni corporis nihil, cupiditate corrupti possimus voluptatibus beatae consectetur sed eaque earum facilis amet recusandae, consequuntur dolorum. Iste quae itaque ex velit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni corporis nihil, cupiditate corrupti possimus voluptatibus beatae consectetur sed eaque earum facilis amet recusandae, consequuntur dolorum. Iste quae itaque ex velit.",
+    "stars": 2
+  },
+  {
+    "title": "TÍTULO 3",
+    "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni corporis nihil, cupiditate corrupti possimus voluptatibus beatae consectetur sed eaque earum facilis amet recusandae, consequuntur dolorum. Iste quae itaque ex velit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni corporis nihil, cupiditate corrupti possimus voluptatibus beatae consectetur sed eaque earum facilis amet recusandae, consequuntur dolorum. Iste quae itaque ex velit.",
+    "stars": 3
+  },
+  {
+    "title": "TÍTULO 4",
+    "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni corporis nihil, cupiditate corrupti possimus voluptatibus beatae consectetur sed eaque earum facilis amet recusandae, consequuntur dolorum. Iste quae itaque ex velit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni corporis nihil, cupiditate corrupti possimus voluptatibus beatae consectetur sed eaque earum facilis amet recusandae, consequuntur dolorum. Iste quae itaque ex velit.",
+    "stars": 4
+  },
+  {
+    "title": "TÍTULO 5",
+    "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni corporis nihil, cupiditate corrupti possimus voluptatibus beatae consectetur sed eaque earum facilis amet recusandae, consequuntur dolorum. Iste quae itaque ex velit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni corporis nihil, cupiditate corrupti possimus voluptatibus beatae consectetur sed eaque earum facilis amet recusandae, consequuntur dolorum. Iste quae itaque ex velit.",
+    "stars": 5
+  }
+]

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <%- include('partials/head') %>
+</head>
+
+<body>
+  <header>
+    <%- include('partials/header') %>
+  </header>
+
+  <div class="container mt-4">
+    <% if (errors.length > 0) { %>
+      <% errors.forEach(error => { %>
+        <div class="alert alert-danger"><%= error.message %></div>
+      <% }) %>
+    <% } %>
+
+    <h3>Nova postagem</h3>
+
+    <div class="card card-body">
+      <h4>Nova postagem</h4>
+      <form action="/admin/postagens/add" method="POST">
+        <label>Titulo</label>
+        <input class="form-control" type="text" id="titulo" name="titulo"
+          placeholder="Digite o título da postagem" required>
+
+        <label class="mt-2">Slug</label>
+        <input class="form-control" type="text" id="slug" name="slug" placeholder="Digite o slug da postagem" required>
+
+        <label class="mt-2">Descrição</label>
+        <input class="form-control" type="text" id="descricao" name="descricao" placeholder="Digite descrição da postagem" required>
+
+        <label class="mt-2">Conteúdo</label>
+        <textarea class="form-control" id="conteudo" name="conteudo" required></textarea >
+
+        <label class="mt-2">Categoria</label>
+        <select class="form-select" name="categoria" id="categoria">
+          <% if (categorias.length > 0) { %>
+            <% categorias.forEach(categoria => { %>
+              <option value="<%= categoria.id %>"><%= categoria.nome %></option>
+            <% }) %>
+          <% } else { %>
+              <option value="0">Nenhuma categoria cadastrada</option>
+          <% } %>
+        </select>
+
+        <button class="btn btn-success mt-4">Criar postagem</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <%- include('partials/footer') %>
+  </footer>
+
+  <%- include('partials/foot') %>
+</body>
+
+</html>

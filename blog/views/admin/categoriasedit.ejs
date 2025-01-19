@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <%- include('partials/head') %>
+</head>
+
+<body>
+  <header>
+    <%- include('partials/header') %>
+  </header>
+
+  <div class="container mt-4">
+
+    <% if (!error) { %>
+      <% error.forEach((element) => { %>
+        <div class="alert alert-danger"><%= element.message %></div>
+      <% }) %>
+    <% } %>
+
+    <h3>Alterar categoria</h3>
+
+    <div class="card card-body">
+      <form action="/admin/categorias/edit" method="post">
+        <input type="hidden" name="id" value=<%= categoria.id %>>
+        <label>Categoria</label>
+        <input class="form-control" type="text" id="categoria" name="nome"
+          placeholder="Digite o nome da categoria" value=<%= categoria.nome %>>
+        <br>
+        <label>Slug</label>
+        <input class="form-control" type="text" id="slug" name="slug" placeholder="Digite o slug da categoria" value=<%= categoria.slug %>>
+        <br>
+        <button class="btn btn-success">Alterar categoria</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <%- include('partials/footer') %>
+  </footer>
+
+  <%- include('partials/foot') %>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <%- include('partials/head') %>
+</head>
+
+<body>
+  <header>
+    <%- include('partials/header') %>
+  </header>
+
+  <div class="container mt-4">
+    <%- include('partials/msg') %>
+    <h2>Lista de postagens</h2>
+    <hr>
+    <a href="/admin/postagens/add"><button class="btn btn-success">Nova postagem</button></a>
+
+    <% if (postagens.length > 0) { %>
+      <% postagens.forEach(postagem => { %>
+        <div class="card card-body mt-4">
+          <h4><%= postagem.titulo %></h4>
+          <h6>Descrição: <%= postagem.descricao %></h6>
+          <small>Data: <%= postagem.data %></small>
+          <small>Categoria: <%= postagem.categoria.nome %></small><br>
+          <div class="d-flex">
+            <a class="mx-1" href="/admin/postagens/edit/<%= postagem.id %>"><button class="btn btn-success">Alterar</button></a>
+            <a href="/admin/postagens/delete/<%= postagem.id %>"><button class="btn btn-danger">Apagar</button></a>
+          </div>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <p>Nenhuma postagem cadastrada.</p>
+    <% } %>
+  </div>
+
+  <footer>
+    <%- include('partials/footer') %>
+  </footer>
+
+  <%- include('partials/foot') %>
+</body>
+
+</html>
